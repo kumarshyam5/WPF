@@ -10,7 +10,7 @@
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"
-                      WindowState="Maximized" Icon="Images/Icon1.ico">
+                      WindowState="Maximized">
     <Grid>
         
     </Grid>
