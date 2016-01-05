@@ -23,10 +23,17 @@ namespace MRP4u_Sample
         public LoginView()
         {
             InitializeComponent();
+            progressBar.Visibility = Visibility.Collapsed;
+            textBox.Focus();
+            
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
+            textBox.IsReadOnly = true;
+            passwordBox.IsEnabled = false;
+            progressBar.Visibility = Visibility.Visible;
+            await Task.Delay(1500);
             this.Hide();
             MainWindow mn = new MainWindow();
             mn.Show();

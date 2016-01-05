@@ -21,6 +21,7 @@
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="180,77,0,0" VerticalAlignment="Top" Width="172"/>
         <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="180,128,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <Button x:Name="button_Copy" Content="Cancel" HorizontalAlignment="Left" Margin="277,128,0,0" VerticalAlignment="Top" Width="75"/>
+        <Controls:ProgressRing x:Name="progressBar" HorizontalAlignment="Left" Margin="231,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.783"/>
 
     </Grid>
 </Controls:MetroWindow>
