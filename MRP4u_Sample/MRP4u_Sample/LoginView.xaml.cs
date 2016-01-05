@@ -39,5 +39,10 @@ namespace MRP4u_Sample
             mn.Show();
             this.Close();
         }
+
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

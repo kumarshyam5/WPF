@@ -10,17 +10,21 @@
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"
-       Height="229.787" Width="444.681" Icon="Images/Icon2.ico" ResizeMode="NoResize">
+       Height="218.085" Width="444.681" Icon="Images/Icon2.ico" ResizeMode="NoResize" LeftWindowCommandsOverlayBehavior="Never" ShowMinButton="False" ShowCloseButton="False">
     <Controls:MetroWindow.Background>
         <ImageBrush ImageSource="Images/Gradient2.jpg"/>
     </Controls:MetroWindow.Background>
     <Grid>
-        <Label x:Name="label" Content="User name:" HorizontalAlignment="Left" Margin="86,34,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Username:" HorizontalAlignment="Left" Margin="86,34,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="label_Copy" Content="Password:" HorizontalAlignment="Left" Margin="93,77,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="180,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="180,77,0,0" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="180,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="180,77,0,0" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2"/>
         <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="180,128,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button_Copy" Content="Cancel" HorizontalAlignment="Left" Margin="277,128,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy" Content="Close" HorizontalAlignment="Left" Margin="277,128,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="button_Copy_Click"/>
         <Controls:ProgressRing x:Name="progressBar" HorizontalAlignment="Left" Margin="231,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,0.783"/>
 
     </Grid>
