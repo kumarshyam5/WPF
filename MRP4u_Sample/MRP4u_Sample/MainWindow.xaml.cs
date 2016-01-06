@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using MRP4ME_Sample;
 
 namespace MRP4u_Sample
 {
@@ -24,6 +25,12 @@ namespace MRP4u_Sample
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BOMView vm = new BOMView();
+            vm.ShowDialog();
         }
     }
 }

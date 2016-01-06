@@ -10,10 +10,24 @@
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"
-       Height="218.085" Width="444.681" Icon="Images/Icon2.ico" ResizeMode="NoResize" LeftWindowCommandsOverlayBehavior="Never" ShowMinButton="False" ShowCloseButton="False">
+       Height="218.085" Width="444.681" Icon="Images/Home.ico" ResizeMode="NoResize" LeftWindowCommandsOverlayBehavior="Never" ShowMinButton="False" ShowCloseButton="False">
     <Controls:MetroWindow.Background>
         <ImageBrush ImageSource="Images/Gradient2.jpg"/>
     </Controls:MetroWindow.Background>
+
+    <Controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="{TemplateBinding Width}"
+                 Height="{TemplateBinding Height}"
+                 Margin="3"
+                 Background="Transparent"
+                 RenderOptions.EdgeMode="Aliased"
+                 RenderOptions.BitmapScalingMode="HighQuality">
+                <Image Source="Images/Home.ico"></Image>
+            </Grid>
+        </DataTemplate>
+    </Controls:MetroWindow.IconTemplate>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300*"/>
