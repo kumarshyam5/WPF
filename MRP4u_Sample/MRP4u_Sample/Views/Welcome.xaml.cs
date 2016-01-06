@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Practices.Prism.Mvvm;
+using MRP4u_Sample.core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,19 +14,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using Microsoft.Practices.Prism.Mvvm;
 
-namespace MRP4u_Sample
+namespace MRP4u_Sample.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Welcome.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow, IView
+    public partial class Welcome : UserControl, IView, ICreateRegionManagerScope
     {
-        public MainWindow()
+        public Welcome()
         {
             InitializeComponent();
+        }
+
+        public bool CreateRegionManagerScope
+        {
+            get { return true; }
         }
     }
 }

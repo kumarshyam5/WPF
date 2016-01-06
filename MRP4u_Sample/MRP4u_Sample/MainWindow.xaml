@@ -5,13 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MRP4u_Sample"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:prism="http://www.codeplex.com/prism"
+        xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+        mvvm:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="MRP4U" WindowStartupLocation="CenterScreen" 
+        Title="MRP4U" WindowStartupLocation="CenterScreen" GlowBrush="Black" WindowTransitionsEnabled="False"
                       BorderThickness="0" 
-                      GlowBrush="Black"
-                      WindowTransitionsEnabled="False"
                       WindowState="Maximized" Icon="Images/Icon2.ico">
+    <Window.Resources>
+        <Style TargetType="TabItem">
+            <Setter Property="Header" Value="{Binding DataContext.Title}"/>
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            Margin="0,0,7,0" Content="{Binding}"/>
+                            <Button Grid.Column="1" Content="x">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <local:CloseTabAction/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </Button>
+
+                        </Grid>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
+        </StackPanel>
+
+        <TabControl Grid.Row="1" prism:RegionManager.RegionName="TabRegion" />
     </Grid>
 </Controls:MetroWindow>
