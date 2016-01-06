@@ -10,9 +10,11 @@
         xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
         mvvm:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="MRP4U" WindowStartupLocation="CenterScreen" GlowBrush="Black" WindowTransitionsEnabled="False"
+        Title="MRP4ME" WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 
-                      WindowState="Maximized" Icon="Images/Icon2.ico">
+                      GlowBrush="Black"
+                      WindowTransitionsEnabled="False"
+                      WindowState="Maximized" Icon="Images/Home.ico">
     <Window.Resources>
         <Style TargetType="TabItem">
             <Setter Property="Header" Value="{Binding DataContext.Title}"/>
@@ -52,5 +54,22 @@
         </StackPanel>
 
         <TabControl Grid.Row="1" prism:RegionManager.RegionName="TabRegion" />
+    <!--<Controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="{TemplateBinding Width}"
+                 Height="{TemplateBinding Height}"
+                 Margin="3"
+                 Background="Transparent"
+                 RenderOptions.EdgeMode="Aliased"
+                 RenderOptions.BitmapScalingMode="HighQuality">
+                <Image Source="Images/Home.ico"></Image>
+            </Grid>
+        </DataTemplate>
+    </Controls:MetroWindow.IconTemplate>
+    
+    <Grid>
+
+        <Button Content="Bills of Material" Click="Button_Click" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+-->
     </Grid>
 </Controls:MetroWindow>

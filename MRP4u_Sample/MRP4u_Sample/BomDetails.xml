@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BomDetails>
+  <data>
+    <Id>PO101</Id>
+    <Name>A</Name>
+    <Unit>Piece</Unit>
+    <Quantity>1</Quantity>
+    <Level>1</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+</data>
+  <data>
+    <Id>CO343</Id>
+    <Name>B</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>2</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+  <data>
+    <Id>CO156</Id>
+    <Name>C</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>3</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+  <data>
+    <Id>CO156</Id>
+    <Name>C</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>3</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+  <data>
+    <Id>CO156</Id>
+    <Name>C</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>3</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+  <data>
+    <Id>CO156</Id>
+    <Name>C</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>3</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+  <data>
+    <Id>CO156</Id>
+    <Name>C</Name>
+    <Unit>Piece</Unit>
+    <Quantity>2</Quantity>
+    <Level>3</Level>
+    <Owner>Jennifer Martin</Owner>
+    <LeadTime></LeadTime>
+  </data>
+ 
+  
+</BomDetails>

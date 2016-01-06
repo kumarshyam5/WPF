@@ -10,28 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using Microsoft.Practices.Prism.Mvvm;
-using MRP4ME_Sample;
+using System.Collections.ObjectModel;
+using System.Xml.Linq;
 
-namespace MRP4u_Sample
+namespace MRP4ME_Sample
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BOMView.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow, IView
+    public partial class BOMView : MetroWindow
     {
-        public MainWindow()
+        public BOMView()
         {
             InitializeComponent();
+
+            FillBom();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        void FillBom()
         {
-            BOMView vm = new BOMView();
-            vm.ShowDialog();
+           
+            XElement bomList = XElement.Load("BomDetails.xml");
+            BomDataGrid.DataContext = bomList;
         }
     }
 }
