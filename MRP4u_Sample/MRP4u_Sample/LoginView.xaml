@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MRP4u_Sample"
           xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-          Title="MRP4U" WindowStartupLocation="CenterScreen" 
+          Title="MRP4ME" WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"

@@ -33,7 +33,7 @@ namespace MRP4u_Sample
             textBox.IsReadOnly = true;
             passwordBox.IsEnabled = false;
             progressBar.Visibility = Visibility.Visible;
-            await Task.Delay(1500);
+            await Task.Delay(1000);
             this.Hide();
             MainWindow mn = new MainWindow();
             mn.Show();
