@@ -199,7 +199,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Purchase Order</Button>
