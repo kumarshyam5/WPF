@@ -136,19 +136,18 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Height="75" Grid.Row="0" Orientation="Horizontal"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
-            <StackPanel.Background>
+        <Grid Grid.Row="0">
+            <Grid.Background>
                 <ImageBrush ImageSource="Images/Gradient2.jpg" Stretch="UniformToFill"/>
-            </StackPanel.Background>
-            <TextBlock FontWeight="Bold" FontSize="16">LOGO HERE</TextBlock>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Purchase Order</Button>
@@ -156,11 +155,14 @@
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Specifications</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Inventory Availability</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Reports</Button>
-        </StackPanel>
+            </StackPanel>
+        </Grid>
 
-        <TabControl Grid.Row="2" prism:RegionManager.RegionName="TabRegion" />
-    
+        <Border Margin="5,0,5,5" Grid.Row="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >
 
+            <TabControl Margin="5"   prism:RegionManager.RegionName="TabRegion">
 
+            </TabControl>
+        </Border>
     </Grid>
 </Controls:MetroWindow>
