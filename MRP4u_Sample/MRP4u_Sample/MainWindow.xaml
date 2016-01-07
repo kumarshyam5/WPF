@@ -16,7 +16,12 @@
                       WindowTransitionsEnabled="False"
                       WindowState="Maximized" Icon="Images/Home.ico">
     <Window.Resources>
+        <Thickness x:Key="Tab_Border_Thickness">2,2,2,2</Thickness>
+        <Thickness x:Key="TabItem_Border_Thickness_Selected">2,2,2,0</Thickness>
         <Style TargetType="TabItem">
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Background" Value="LightBlue"/>
             <Setter Property="Header" Value="{Binding DataContext.Title}"/>
             <Setter Property="HeaderTemplate">
                 <Setter.Value>
@@ -28,7 +33,10 @@
                             </Grid.ColumnDefinitions>
                             <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center"
                                             Margin="0,0,7,0" Content="{Binding}"/>
-                            <Button Grid.Column="1" Content="x">
+                            <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/close.png"  Stretch="Uniform"/>
+                                </Button.Background>
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Click">
                                         <local:CloseTabAction/>
@@ -40,7 +48,51 @@
                     </DataTemplate>
                 </Setter.Value>
             </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border>
+                            <Grid>
+                                <Grid>
+                                    <Border Name="tabBorder" CornerRadius="3,3,0,0" Background="{TemplateBinding Background}" 
+                                       BorderBrush="{TemplateBinding BorderBrush}" 
+                                       BorderThickness="{TemplateBinding BorderThickness}"/>
+                                </Grid>
+                                <Border BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter ContentSource="Header" 
+                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        
+                        <ControlTemplate.Triggers>
+                            
+                            <Trigger Property="IsSelected"
+                                        Value="True">
+                                <Setter TargetName="tabBorder"
+                                    Property="BorderThickness"
+                                    Value="{StaticResource TabItem_Border_Thickness_Selected}" />
+                                <Setter TargetName="tabBorder"
+                                    Property="Height"
+                                    Value="25" />
+                                <Setter TargetName="tabBorder"
+                                    Property="BorderBrush"
+                                    Value="White" />
+                                <Setter TargetName="tabBorder"
+                                         Property="Background"
+                                         Value="Orange" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                    
+                </Setter.Value>
+            </Setter>
+
         </Style>
+        
+        
 
         <Style x:Key="MyFocusVisual">
             <Setter Property="Control.Template">
