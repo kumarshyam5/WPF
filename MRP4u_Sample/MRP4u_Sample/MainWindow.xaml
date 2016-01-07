@@ -140,16 +140,24 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal">
-            <Button Style="{StaticResource InformButton}" MinWidth="100" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Purchase Order</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Production Schedule</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Specifications</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Inventory Availability</Button>
-            <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Reports</Button>
-        </StackPanel>
-
+       
+        <Border Height="50" >
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#C2E4F0" Offset="0"/>
+                    <GradientStop Color="#0899C9" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Purchase Order</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Production Schedule</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Specifications</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Inventory Availability</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Reports</Button>
+            </StackPanel>
+        </Border>
         <TabControl Grid.Row="1" prism:RegionManager.RegionName="TabRegion" />
         <!--<Controls:MetroWindow.IconTemplate>
         <DataTemplate>
