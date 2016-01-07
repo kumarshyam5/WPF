@@ -122,6 +122,8 @@
     </ApplicationDefinition>
     <Compile Include="core\IRegionManagerAware.cs" />
     <Compile Include="core\RegionManagerAwareBehavior.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\BillOfMaterial.cs" />
     <Compile Include="ViewModels\BillOfMaterialPresentationModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Views\BillOfMaterial.xaml.cs">

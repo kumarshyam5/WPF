@@ -15,17 +15,44 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <DataGrid >
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Name" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Unit" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Quantity" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Level" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Owner" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lead Time" IsReadOnly="True"/>
-            </DataGrid.Columns>
-        </DataGrid>
+            <DataGrid x:Name="BomDataGrid" HorizontalAlignment="Stretch" ItemsSource="{Binding Path=BillsOfMaterials,Mode=OneWay}" AutoGenerateColumns="False"
+                  Grid.Row="0" 
+                  VerticalAlignment="Top" Style="{StaticResource AzureDataGrid}"  Margin="26,60,-26,0" RowHeight="30" IsReadOnly="True" >
+
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Id}"   Header="ID" MinWidth="100"/>
+                    <DataGridTextColumn Binding="{Binding Path=Name}"  Header="Name" MinWidth="100"/>
+                    <DataGridTextColumn Binding="{Binding Path=Unit}"  Header="Unit" MinWidth="60"/>
+                    <DataGridTextColumn Binding="{Binding Path=Quantity}"  Header="Quantity" MinWidth="60"/>
+                    <DataGridTextColumn Binding="{Binding Path=Level}"  Header="Level" MinWidth="60" />
+                    <DataGridTextColumn Binding="{Binding Path=Owner}" Header="Owner" MinWidth="120" />
+                    <DataGridTextColumn Binding="{Binding Path=LeadTime}"  Header="Lead Time" MinWidth="100" />
+                    <DataGridTemplateColumn Width="70" >
+                        <DataGridTemplateColumn.CellTemplate >
+                            <DataTemplate >
+                                <Image Source="Images/Text-Edit-icon.png" Width="25" Height="25"></Image>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="70">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="Images/delete.png" Width="25" Height="25"></Image>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="70">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="Images/Button-Add-icon.png" Width="25" Height="25"></Image>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
         </Grid>
     </Grid>
 </UserControl>
