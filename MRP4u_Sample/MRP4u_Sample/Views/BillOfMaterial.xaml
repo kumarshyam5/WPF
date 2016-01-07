@@ -16,9 +16,7 @@
             </Grid.RowDefinitions>
             <DataGrid x:Name="BomDataGrid" HorizontalAlignment="Stretch" ItemsSource="{Binding Path=BillsOfMaterials,Mode=OneWay}" AutoGenerateColumns="False"
                   Grid.Row="0" 
-                  VerticalAlignment="Top" Style="{StaticResource AzureDataGrid}"  Margin="10,20,-26,0" RowHeight="30" IsReadOnly="True" >
-
-
+                  VerticalAlignment="Top" Style="{StaticResource AzureDataGrid}"   RowHeight="30" IsReadOnly="True" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Id}"   Header="ID" MinWidth="100"/>
                     <DataGridTextColumn Binding="{Binding Path=Name}"  Header="Name" MinWidth="100"/>
@@ -30,14 +28,14 @@
                     <DataGridTemplateColumn Width="70" >
                         <DataGridTemplateColumn.CellTemplate >
                             <DataTemplate >
-                                <Image Source="/MRP4ME_Sample;component/Images/Text-Edit-icon.png"  Width="25" Height="25"></Image>
+                                <Image Source="/MRP4ME_Sample;component/Images/Text-Edit-icon.png" Width="25" Height="25"></Image>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTemplateColumn Width="70">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="/MRP4ME_Sample;component/Images/delete.png"  Width="25" Height="25"></Image>
+                                <Image Source="/MRP4ME_Sample;component/Images/delete.png" Width="25" Height="25"></Image>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

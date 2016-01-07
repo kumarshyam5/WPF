@@ -18,7 +18,10 @@ namespace MRP4u_Sample
 
         void Navigate(string navigationPath)
         {
-            _regionManager.RequestNavigate("TabRegion", navigationPath);
+            if (!string.IsNullOrEmpty(navigationPath))
+            {
+                _regionManager.RequestNavigate("TabRegion", navigationPath);
+            }
         }
     }
 }
