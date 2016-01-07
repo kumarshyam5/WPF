@@ -132,11 +132,7 @@
     <Compile Include="Views\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
-    <Page Include="BOMView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginView.xaml">
+    <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,10 +150,7 @@
     <Compile Include="core\ICreateRegionManagerScope.cs" />
     <Compile Include="core\ScopedRegionNavigationContentLoader.cs" />
     <Compile Include="core\ViewModelBase.cs" />
-    <Compile Include="BOMView.xaml.cs">
-      <DependentUpon>BOMView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginView.xaml.cs">
+    <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -218,7 +211,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BomDetails.xml">
+    <EmbeddedResource Include="Data\BomDetails.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

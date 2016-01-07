@@ -28,10 +28,5 @@ namespace MRP4u_Sample
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            BOMView vm = new BOMView();
-            vm.ShowDialog();
-        }
     }
 }

@@ -44,17 +44,25 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Height="75" Grid.Row="0" Orientation="Horizontal"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="Images/Gradient2.jpg" Stretch="UniformToFill"/>
+            </StackPanel.Background>
+            <TextBlock FontWeight="Bold" FontSize="16">LOGO HERE</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Button Command="{Binding NavigateCommand}" CommandParameter="Welcome">Welcome</Button>
             <Button Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
         </StackPanel>
 
-        <TabControl Grid.Row="1" prism:RegionManager.RegionName="TabRegion" />
-    <!--<Controls:MetroWindow.IconTemplate>
+        <TabControl Grid.Row="2" prism:RegionManager.RegionName="TabRegion" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+        <!--<Controls:MetroWindow.IconTemplate>
         <DataTemplate>
             <Grid Width="{TemplateBinding Width}"
                  Height="{TemplateBinding Height}"
