@@ -17,9 +17,8 @@
             </Grid.RowDefinitions>
             <DataGrid x:Name="BomDataGrid" HorizontalAlignment="Stretch" 
                       ItemsSource="{Binding Path=BillsOfMaterials,Mode=OneWay}" AutoGenerateColumns="False"
-                  Grid.Row="0" VerticalAlignment="Stretch" Style="{StaticResource AzureDataGrid}" RowHeight="30" IsReadOnly="True" >
-
-
+                      Grid.Row="0" VerticalAlignment="Stretch" Style="{StaticResource AzureDataGrid}" 
+                      RowHeight="30" IsReadOnly="True" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Id}"   Header="ID" MinWidth="100"/>
                     <DataGridTextColumn Binding="{Binding Path=Name}"  Header="Name" MinWidth="100"/>
@@ -31,21 +30,21 @@
                     <DataGridTemplateColumn Width="70" >
                         <DataGridTemplateColumn.CellTemplate >
                             <DataTemplate >
-                                <Image Source="/MRP4ME_Sample;component/Images/Text-Edit-icon.png" Width="25" Height="25"></Image>
+                                <Image Source="/MRP4ME_Sample;component/Images/Text-Edit-icon.png" Width="25" Height="25" Cursor="Hand"></Image>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTemplateColumn Width="70">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="/MRP4ME_Sample;component/Images/delete.png" Width="25" Height="25"></Image>
+                                <Image Source="/MRP4ME_Sample;component/Images/delete.png" Width="25" Height="25" Cursor="Hand"></Image>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTemplateColumn Width="70">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="/MRP4ME_Sample;component/Images/Button-Add-icon.png" Width="25" Height="25"></Image>
+                                <Image Source="/MRP4ME_Sample;component/Images/Button-Add-icon.png" Width="25" Height="25" Cursor="Hand"></Image>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
