@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace MRP4u_Sample.ViewModels
 {
-    class BillOfMaterialViewModel : ViewModelBase
+    class BillOfMaterialViewModel : ViewModelBase, INavigationAware
     {
         public BillOfMaterialViewModel()
         {
@@ -39,6 +39,19 @@ namespace MRP4u_Sample.ViewModels
             {
                 return billOfMaterials;
             }
+        }
+
+        bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        void INavigationAware.OnNavigatedFrom(NavigationContext navigationContext)
+        {
+        }
+
+        void INavigationAware.OnNavigatedTo(NavigationContext navigationContext)
+        {
         }
     }
 }

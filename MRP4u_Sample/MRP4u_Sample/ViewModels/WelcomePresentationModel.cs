@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MRP4u_Sample.ViewModels
 {
-    public class WelcomeViewModel : ViewModelBase
+    public class WelcomeViewModel : ViewModelBase, INavigationAware
     {
         private readonly IRegionManager _regionManager;
         public DelegateCommand<string> NavigateCommand { get; set; }
@@ -28,6 +28,19 @@ namespace MRP4u_Sample.ViewModels
             {
                 _regionManager.RequestNavigate("TabRegion", navigationPath);
             }
+        }
+
+        bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        void INavigationAware.OnNavigatedFrom(NavigationContext navigationContext)
+        {
+        }
+
+        void INavigationAware.OnNavigatedTo(NavigationContext navigationContext)
+        {
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using MRP4ME_Sample.Models;
+﻿using Microsoft.Practices.Prism.Regions;
+using MRP4ME_Sample.Models;
 using MRP4u_Sample.core;
 using System.Collections.Generic;
 
 namespace MRP4ME_Sample.ViewModels
 {
-    class ProductStructureViewModel : ViewModelBase
+    class ProductStructureViewModel : ViewModelBase, INavigationAware
     {
         public ProductStructureViewModel()
         {
@@ -37,6 +38,19 @@ namespace MRP4ME_Sample.ViewModels
             if (self == null)
                 self = new ProductStructureViewModel();
             return self;
+        }
+
+        bool INavigationAware.IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        void INavigationAware.OnNavigatedFrom(NavigationContext navigationContext)
+        {
+        }
+
+        void INavigationAware.OnNavigatedTo(NavigationContext navigationContext)
+        {
         }
     }
 }
