@@ -10,7 +10,7 @@
         xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
         mvvm:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="MRP4ME" WindowStartupLocation="CenterScreen" 
+         WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"
@@ -200,6 +200,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
+            <Image Source="Images/LOGO.png" HorizontalAlignment="Left" Margin="31,-19,0,29"></Image>
             <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Home</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
