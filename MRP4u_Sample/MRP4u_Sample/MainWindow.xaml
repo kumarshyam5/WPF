@@ -240,7 +240,7 @@
 
         <Border Margin="5,0,5,5" Grid.Row="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >
 
-            <TabControl Margin="5"   prism:RegionManager.RegionName="TabRegion">
+            <TabControl Margin="5" Background="LightBlue"   prism:RegionManager.RegionName="TabRegion">
 
             </TabControl>
         </Border>
