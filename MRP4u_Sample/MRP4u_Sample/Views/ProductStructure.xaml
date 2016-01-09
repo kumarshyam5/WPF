@@ -3,11 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MRP4u_Sample.Views"
+             xmlns:local="clr-namespace:MRP4ME_Sample.Views"
              xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
              xmlns:prism="http://www.codeplex.com/prism"
              mvvm:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-            
+        <Grid.Resources>
+            <DataTemplate x:Key="NoTemplate">
+                <local:WithoutTemplate/>
+            </DataTemplate>
+            <DataTemplate x:Key="HasTemplate">
+                <local:WithTemplate/>
+            </DataTemplate>
+        </Grid.Resources>
+        <StackPanel Orientation="Horizontal">
+
+            <ContentControl Content="{Binding}" ContentTemplate="{StaticResource NoTemplate}"  />
+            <ContentControl Content="{Binding}" ContentTemplate="{StaticResource HasTemplate}"  />
+
+
+        </StackPanel>
+
     </Grid>
 </UserControl>

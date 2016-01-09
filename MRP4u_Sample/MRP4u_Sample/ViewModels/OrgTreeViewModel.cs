@@ -1,17 +1,16 @@
 ﻿using MRP4ME_Sample.Models;
 using MRP4u_Sample.core;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MRP4ME_Sample.ViewModels
 {
-    class ProductStructureViewModel : ViewModelBase
+    class OrgTreeViewModel : ViewModelBase
     {
-        public ProductStructureViewModel()
-        {
-            Title = "Product Structure";
-        }
-
-        private static ProductStructureViewModel self;
+        private static OrgTreeViewModel self;
 
         private List<OrgElementViewModel> root;
 
@@ -31,12 +30,14 @@ namespace MRP4ME_Sample.ViewModels
             }
         }
 
+        private OrgTreeViewModel() { }
 
-        public static ProductStructureViewModel Instance()
+        public static OrgTreeViewModel Instance()
         {
             if (self == null)
-                self = new ProductStructureViewModel();
+                self = new OrgTreeViewModel();
             return self;
         }
+
     }
 }

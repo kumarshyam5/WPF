@@ -120,12 +120,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="core\CommandBase.cs" />
     <Compile Include="core\IRegionManagerAware.cs" />
+    <Compile Include="core\Node.cs" />
     <Compile Include="core\RegionManagerAwareBehavior.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BillOfMaterial.cs" />
+    <Compile Include="Models\ProductHierarchy.cs" />
     <Compile Include="ViewModels\BillOfMaterialPresentationModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\OrgElementViewModel.cs" />
     <Compile Include="ViewModels\ProductStructureViewModel.cs" />
     <Compile Include="Views\BillOfMaterial.xaml.cs">
       <DependentUpon>BillOfMaterial.xaml</DependentUpon>
@@ -136,6 +140,16 @@
     <Compile Include="Views\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\WithoutTemplate.xaml.cs">
+      <DependentUpon>WithoutTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WithTemplate.xaml.cs">
+      <DependentUpon>WithTemplate.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Styles\TreeViewItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +184,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WithoutTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WithTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -235,6 +257,51 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
