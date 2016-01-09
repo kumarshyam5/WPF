@@ -126,8 +126,12 @@
     <Compile Include="Models\BillOfMaterial.cs" />
     <Compile Include="ViewModels\BillOfMaterialPresentationModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\ProductStructureViewModel.cs" />
     <Compile Include="Views\BillOfMaterial.xaml.cs">
       <DependentUpon>BillOfMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductStructure.xaml.cs">
+      <DependentUpon>ProductStructure.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
@@ -158,6 +162,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\BillOfMaterial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductStructure.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

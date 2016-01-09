@@ -207,7 +207,25 @@
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Production Schedule</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Specifications</Button>
                 <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Inventory Availability</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Reports</Button>
+                <Button x:Name="btnReport" Style="{StaticResource InformButton}" MinWidth="100" Height="35" Click="btnReport_Click">
+                    
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Reports"/>
+                            <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.ContextMenu>
+                        <ContextMenu >
+                            <MenuItem Header="Manufacturing Order"/>
+                            <MenuItem Header="MRP Matrix"/>
+                            <MenuItem Header="Prod Structure" x:Name="mnuProdStructure" Command="{Binding NavigateCommand}" CommandParameter="ProdStructure"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <Menu >
+                    <MenuItem></MenuItem>
+                </Menu>
             </StackPanel>
         </Grid>
 
