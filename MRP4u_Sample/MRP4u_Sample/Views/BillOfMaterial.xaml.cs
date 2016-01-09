@@ -13,6 +13,7 @@ namespace MRP4u_Sample.Views
         public BillOfMaterial()
         {
             InitializeComponent();
+            ViewModelLocationProvider.AutoWireViewModelChanged(this);
         }
 
         public bool CreateRegionManagerScope

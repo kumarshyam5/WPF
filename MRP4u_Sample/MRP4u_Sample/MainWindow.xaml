@@ -8,7 +8,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:prism="http://www.codeplex.com/prism"
         xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
-        mvvm:ViewModelLocator.AutoWireViewModel="True"
+     
         mc:Ignorable="d"
          WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 

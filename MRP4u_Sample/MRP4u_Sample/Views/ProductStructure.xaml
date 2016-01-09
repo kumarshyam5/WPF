@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MRP4ME_Sample.Views"
              xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
              xmlns:prism="http://www.codeplex.com/prism"
-             mvvm:ViewModelLocator.AutoWireViewModel="True">
+            >
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="NoTemplate">

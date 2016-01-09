@@ -26,6 +26,7 @@ namespace MRP4u_Sample.Views
         public Welcome()
         {
             InitializeComponent();
+            ViewModelLocationProvider.AutoWireViewModelChanged(this);
         }
 
         public bool CreateRegionManagerScope

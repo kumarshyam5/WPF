@@ -25,6 +25,7 @@ namespace MRP4ME_Sample.Views
         public ProductStructure()
         {
             InitializeComponent();
+            ViewModelLocationProvider.AutoWireViewModelChanged(this);
         }
 
         public bool CreateRegionManagerScope

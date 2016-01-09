@@ -26,8 +26,9 @@ namespace MRP4u_Sample
         public MainWindow()
         {
             InitializeComponent();
+            ViewModelLocationProvider.AutoWireViewModelChanged(this);
 
-            
+
         }
 
         private void btnReport_Click(object sender, RoutedEventArgs e)
