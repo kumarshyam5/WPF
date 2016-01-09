@@ -20,6 +20,8 @@ namespace MRP4u_Sample
 
             Bootstrapper bs = new Bootstrapper();
             bs.Run();
+            var window = Application.Current.MainWindow;
+            (window as MainWindow).btnName.Command.Execute("Welcome");
         }
     }
 }

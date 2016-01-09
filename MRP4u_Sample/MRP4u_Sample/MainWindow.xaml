@@ -202,13 +202,20 @@
             </Grid.RowDefinitions>
             <Image Source="Images/LOGO.png" HorizontalAlignment="Left" Margin="31,-19,0,29"></Image>
             <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" Command="{Binding NavigateCommand}" CommandParameter="Welcome">Home</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Purchase Order</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Production Schedule</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Specifications</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" Command="{Binding NavigateCommand}">Inventory Availability</Button>
-                <Button x:Name="btnReport" Style="{StaticResource InformButton}" MinWidth="100" Height="35" Click="btnReport_Click">
+                <Button x:Name="btnName" Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" 
+                        Command="{Binding NavigateCommand}" CommandParameter="Welcome">Home</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Command="{Binding NavigateCommand}">Purchase Order</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Command="{Binding NavigateCommand}">Production Schedule</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Command="{Binding NavigateCommand}">Specifications</Button>
+                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Command="{Binding NavigateCommand}">Inventory Availability</Button>
+                <Button x:Name="btnReport" Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
+                        Click="btnReport_Click">
 
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
@@ -227,7 +234,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <Label Content="Welcome User | " FontWeight="Bold"></Label>
-                <Button Content="Log out" Width="75" Height="20"></Button>
+                <Button Style="{StaticResource InformButton}" Content="Log out" Width="75" Height="20"></Button>
             </StackPanel>
         </Grid>
 
