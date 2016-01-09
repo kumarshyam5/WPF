@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Unity;
+using MRP4ME_Sample.Views;
 using MRP4u_Sample.Views;
 
 namespace MRP4u_Sample
@@ -17,6 +18,7 @@ namespace MRP4u_Sample
         {
             _container.RegisterType<object, Welcome>("Welcome");
             _container.RegisterType<object, BillOfMaterial>("BillOfMaterial");
+            _container.RegisterType<object, ProductStructure>("ProdStructure");
         }
     }
 }
