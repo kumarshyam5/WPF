@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Prism.Commands;
+using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.Regions;
 using MRP4u_Sample.core;
 using System;
@@ -11,9 +12,22 @@ namespace MRP4u_Sample.ViewModels
 {
     public class WelcomeViewModel : ViewModelBase
     {
-        public WelcomeViewModel()
+        private readonly IRegionManager _regionManager;
+        public DelegateCommand<string> NavigateCommand { get; set; }
+
+        public WelcomeViewModel(IRegionManager regionManager)
         {
-            Title = "Welcome";
+            Title = "Home";
+            _regionManager = regionManager;
+            NavigateCommand = new DelegateCommand<string>(Navigate);
+        }
+
+        void Navigate(string navigationPath)
+        {
+            if (!string.IsNullOrEmpty(navigationPath))
+            {
+                _regionManager.RequestNavigate("TabRegion", navigationPath);
+            }
         }
     }
 }
