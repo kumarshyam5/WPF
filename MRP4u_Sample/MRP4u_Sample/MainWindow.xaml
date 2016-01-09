@@ -13,6 +13,7 @@
          WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 
                       GlowBrush="Black"
+                      Background="AliceBlue"
                       WindowTransitionsEnabled="False"
                       WindowState="Maximized" Icon="Images/AppIcon.ico" MinWidth="1000">
     <Window.Resources>
