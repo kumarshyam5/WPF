@@ -26,6 +26,8 @@ namespace MRP4u_Sample
         public MainWindow()
         {
             InitializeComponent();
+
+            
         }
 
     }
