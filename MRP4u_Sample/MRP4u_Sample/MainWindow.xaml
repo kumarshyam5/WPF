@@ -227,6 +227,10 @@
                     <MenuItem></MenuItem>
                 </Menu>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Label Content="Welcome User | " FontWeight="Bold"></Label>
+                <Button Content="Log out" Width="75" Height="20"></Button>
+            </StackPanel>
         </Grid>
 
         <Border Margin="5,0,5,5" Grid.Row="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >

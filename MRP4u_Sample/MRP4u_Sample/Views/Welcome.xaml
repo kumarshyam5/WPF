@@ -18,7 +18,7 @@
                 <StackPanel Orientation="Horizontal">
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Purchase Order</TextBlock>
                         </Border>
                         <Border  BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
@@ -32,7 +32,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Production Shcedule</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
@@ -44,7 +44,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Specifications</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
@@ -59,7 +59,7 @@
                 <StackPanel Orientation="Horizontal" >
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Bill of Materials</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
@@ -74,7 +74,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Inventory Availability</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
@@ -86,7 +86,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="200" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Reports</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
