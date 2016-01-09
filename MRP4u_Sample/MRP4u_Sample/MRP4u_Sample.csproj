@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\Home.ico</ApplicationIcon>
+    <ApplicationIcon>Images\AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>MRP4u_Sample.App</StartupObject>
@@ -247,9 +247,6 @@
     <Resource Include="Images\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Home.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\close.png" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +310,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AppIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

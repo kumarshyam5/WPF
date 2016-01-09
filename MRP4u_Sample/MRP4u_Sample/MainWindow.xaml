@@ -14,7 +14,7 @@
                       BorderThickness="0" 
                       GlowBrush="Black"
                       WindowTransitionsEnabled="False"
-                      WindowState="Maximized" Icon="Images/Home.ico">
+                      WindowState="Maximized" Icon="Images/AppIcon.ico">
     <Window.Resources>
         <Thickness x:Key="Tab_Border_Thickness">2,2,2,2</Thickness>
         <Thickness x:Key="TabItem_Border_Thickness_Selected">2,2,2,0</Thickness>
