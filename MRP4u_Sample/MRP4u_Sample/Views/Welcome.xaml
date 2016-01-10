@@ -93,7 +93,7 @@
                                 <ImageBrush ImageSource="/MRP4ME_Sample;component/Images/6.png" />
                             </Border.Background>
                             <Border.InputBindings>
-                                <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding NavigateCommand}" CommandParameter="Reports" />
+                                <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding NavigateCommand}" CommandParameter="MRPMatrix" />
                             </Border.InputBindings>
                         </Border>
                     </StackPanel>

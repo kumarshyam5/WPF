@@ -38,5 +38,10 @@ namespace MRP4u_Sample
             (sender as Button).ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             (sender as Button).ContextMenu.IsOpen = true;
         }
+
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
