@@ -43,12 +43,32 @@ namespace MRP4ME_Sample.Views
             dtRow["SalesAcheived"] = 10000;
             dtRow["SalesTarget"] = 8000;
             datavalue.DataTable1.Rows.Add(dtRow);
-
+            dtRow = datavalue.DataTable1.NewRow();
+            dtRow["Year"] = 2011;
+            dtRow["SalesAcheived"] = 12000;
+            dtRow["SalesTarget"] = 9000;
+            datavalue.DataTable1.Rows.Add(dtRow);
+            dtRow = datavalue.DataTable1.NewRow();
+            dtRow["Year"] = 2012;
+            dtRow["SalesAcheived"] = 11000;
+            dtRow["SalesTarget"] = 10000;
+            datavalue.DataTable1.Rows.Add(dtRow);
+            dtRow = datavalue.DataTable1.NewRow();
+            dtRow["Year"] = 2013;
+            dtRow["SalesAcheived"] = 11000;
+            dtRow["SalesTarget"] = 11000;
+            datavalue.DataTable1.Rows.Add(dtRow);
+            dtRow = datavalue.DataTable1.NewRow();
+            dtRow["Year"] = 2014;
+            dtRow["SalesAcheived"] = 14000;
+            dtRow["SalesTarget"] = 11000;
+            datavalue.DataTable1.Rows.Add(dtRow);
 
             rptDataSource.Name = "DataSet1";
-            rptDataSource.Value = datavalue.Tables[0].DefaultView;
+            rptDataSource.Value = datavalue.DataTable1;
             this.rptName.LocalReport.DataSources.Add(rptDataSource);
-            this.rptName.LocalReport.ReportPath = "RPMatrix.rdlc";
+            //this.rptName.LocalReport.ReportEmbeddedResource = "MRP4u_Sample.reports.MRPMatrix.rdlc";
+            this.rptName.LocalReport.ReportPath = "reports/MRPMatrix.rdlc";
             this.rptName.RefreshReport();
         }
 
