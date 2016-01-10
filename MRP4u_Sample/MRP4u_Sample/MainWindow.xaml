@@ -199,39 +199,13 @@
                 <ImageBrush ImageSource="Images/Gradient2.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="80" />
             </Grid.RowDefinitions>
-            <Image Source="Images/LOGO.png" HorizontalAlignment="Left" Margin="31,-19,0,29"></Image>
+            <Image Source="Images/LOGO250.png" HorizontalAlignment="Left" Margin="-24,-26,0,5" Width="333">
+                
+            </Image>
             <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
-                <Button x:Name="btnName" Style="{StaticResource InformButton}" MinWidth="100" Height="35" IsDefault="True" 
-                        Command="{Binding NavigateCommand}" CommandParameter="Welcome">Home</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Command="{Binding NavigateCommand}">Purchase Order</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Command="{Binding NavigateCommand}">Production Schedule</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Command="{Binding NavigateCommand}">Specifications</Button>
-                <Button Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Command="{Binding NavigateCommand}">Inventory Availability</Button>
-                <Button x:Name="btnReport" Style="{StaticResource InformButton}" MinWidth="100" Height="35" 
-                        Click="btnReport_Click">
-
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Reports"/>
-                            <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
-                        </StackPanel>
-                    </Button.Content>
-                    <Button.ContextMenu>
-                        <ContextMenu >
-                            <MenuItem Header="Manufacturing Order"/>
-                            <MenuItem Header="MRP Matrix" x:Name="mnuMRPMatrix" Command="{Binding NavigateCommand}" CommandParameter="MRPMatrix"/>
-                            <MenuItem Header="Prod Structure" x:Name="mnuProdStructure" Command="{Binding NavigateCommand}" CommandParameter="ProdStructure"/>
-                        </ContextMenu>
-                    </Button.ContextMenu>
-                </Button>
+                
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <Label Content="Welcome User | " FontWeight="Bold"></Label>
@@ -239,11 +213,67 @@
             </StackPanel>
         </Grid>
 
-        <Border Margin="5,0,5,5" Grid.Row="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Margin="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch" BorderThickness="0" BorderBrush="SteelBlue" CornerRadius="10" >
+                <StackPanel Width="190">
+                    <Expander Header="Home" >
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button x:Name="btnName" Style="{StaticResource InformButton}" MinWidth="100"  IsDefault="True" 
+                        Command="{Binding NavigateCommand}" CommandParameter="Welcome">Home</Button>
+                           
+                        </Border>
+                    </Expander>
+                    <Expander Header="Bill Of Material">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button Style="{StaticResource InformButton}" MinWidth="100" 
+                        Command="{Binding NavigateCommand}" CommandParameter="BillOfMaterial">Bill Of Material</Button>
+                        </Border>
+                    </Expander>
+                    <Expander Header="Purchase order">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button Style="{StaticResource InformButton}" MinWidth="100" 
+                        Command="{Binding NavigateCommand}">Purchase Order</Button>
+                        </Border>
+                    </Expander>
+                    <Expander Header="Production Schedule">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button Style="{StaticResource InformButton}" MinWidth="100" 
+                        Command="{Binding NavigateCommand}">Production Schedule</Button>
+                        </Border>
+                    </Expander>
+                    <Expander Header="Specifications">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button Style="{StaticResource InformButton}" MinWidth="100" 
+                        Command="{Binding NavigateCommand}">Specifications</Button>
+                        </Border>
+                    </Expander>
+                    <Expander Header="Inventory Availabilty">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <Button Style="{StaticResource InformButton}" MinWidth="100" 
+                        Command="{Binding NavigateCommand}">Inventory Availability</Button>
+                        </Border>
+                    </Expander>
+                    <Expander Header="Reports">
+                        <Border  BorderBrush="Black" BorderThickness="1">
+                            <StackPanel Orientation="Vertical">
+                                <Button x:Name="btnReport" Content="Manufacturing Order" Style="{StaticResource InformButton}" MinWidth="100" 
+                                    Click="btnReport_Click" />
+                                <Button  Content="MRP Matrix" Style="{StaticResource InformButton}" MinWidth="100" x:Name="mnuMRPMatrix" Command="{Binding NavigateCommand}" CommandParameter="MRPMatrix" />
+                                <Button  Content="Prod Structure" Style="{StaticResource InformButton}" MinWidth="100" x:Name="mnuProdStructure" Command="{Binding NavigateCommand}" CommandParameter="ProdStructure"/>
 
-            <TabControl Margin="5" Background="LightBlue"   prism:RegionManager.RegionName="TabRegion">
-
-            </TabControl>
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                </StackPanel>
+            </Border>
+            <Border Margin="5,0,5,5" Grid.Column="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >
+                <TabControl Margin="5" Background="LightBlue"   prism:RegionManager.RegionName="TabRegion">
+                </TabControl>
         </Border>
+        </Grid>
     </Grid>
 </Controls:MetroWindow>

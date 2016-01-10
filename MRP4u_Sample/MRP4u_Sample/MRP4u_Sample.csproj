@@ -235,6 +235,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Images\Logo250.png" />
     <Content Include="reports\MRPMatrix.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
