@@ -94,6 +94,7 @@
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
       <HintPath>Libraries\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -111,9 +112,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -124,11 +127,21 @@
     <Compile Include="core\IRegionManagerAware.cs" />
     <Compile Include="core\Node.cs" />
     <Compile Include="core\RegionManagerAwareBehavior.cs" />
+    <Compile Include="Data\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BillOfMaterial.cs" />
     <Compile Include="Models\ProductHierarchy.cs" />
+    <Compile Include="Models\SalesDetails.cs" />
     <Compile Include="ViewModels\BillOfMaterialPresentationModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MRPMatrixViewModel.cs" />
     <Compile Include="ViewModels\OrgElementViewModel.cs" />
     <Compile Include="ViewModels\ProductStructureViewModel.cs" />
     <Compile Include="Views\BillOfMaterial.xaml.cs">
@@ -136,6 +149,9 @@
     </Compile>
     <Compile Include="Views\ProductStructure.xaml.cs">
       <DependentUpon>ProductStructure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MRPMatrix.xaml.cs">
+      <DependentUpon>MRPMatrix.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
@@ -183,6 +199,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MRPMatrix.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -215,6 +235,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="reports\MRPMatrix.rdlc" />
+    <None Include="Data\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -311,9 +343,7 @@
   <ItemGroup>
     <Resource Include="Images\AppIcon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

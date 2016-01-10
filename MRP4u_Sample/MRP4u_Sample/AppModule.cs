@@ -19,6 +19,7 @@ namespace MRP4u_Sample
             _container.RegisterType<object, Welcome>("Welcome");
             _container.RegisterType<object, BillOfMaterial>("BillOfMaterial");
             _container.RegisterType<object, ProductStructure>("ProdStructure");
+            _container.RegisterType<object, MRPMatrix>("MRPMatrix");
         }
     }
 }

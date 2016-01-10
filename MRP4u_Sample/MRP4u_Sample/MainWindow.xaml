@@ -227,7 +227,7 @@
                     <Button.ContextMenu>
                         <ContextMenu >
                             <MenuItem Header="Manufacturing Order"/>
-                            <MenuItem Header="MRP Matrix"/>
+                            <MenuItem Header="MRP Matrix" x:Name="mnuMRPMatrix" Command="{Binding NavigateCommand}" CommandParameter="MRPMatrix"/>
                             <MenuItem Header="Prod Structure" x:Name="mnuProdStructure" Command="{Binding NavigateCommand}" CommandParameter="ProdStructure"/>
                         </ContextMenu>
                     </Button.ContextMenu>
