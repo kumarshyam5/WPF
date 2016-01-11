@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\AppIcon.ico</ApplicationIcon>
+    <ApplicationIcon>MRPIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>MRP4u_Sample.App</StartupObject>
@@ -235,7 +235,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Images\Logo250.png" />
+    <Resource Include="Images\TopHeaderBg.jpg" />
+    <Resource Include="Images\MRPIcon.ico" />
+    <Resource Include="Images\AppLogo.png" />
+    <Resource Include="MRPIcon.ico" />
     <Content Include="reports\MRPMatrix.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -259,9 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Gradient2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -339,12 +339,6 @@
     <Resource Include="Images\4.png" />
     <Resource Include="Images\5.png" />
     <Resource Include="Images\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\LOGO.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\AppIcon.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

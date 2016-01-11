@@ -17,10 +17,10 @@
                 <StackPanel Orientation="Horizontal">
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Purchase Order</TextBlock>
                         </Border>
-                        <Border  BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
+                        <Border  BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#DBF5D2">
                             <Border.Background>
                                 <ImageBrush  ImageSource="/MRP4ME_Sample;component/Images/1.png" Stretch="UniformToFill"/>
                             </Border.Background>
@@ -31,10 +31,10 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Production Shcedule</TextBlock>
                         </Border>
-                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
+                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#DBF5D2">
                             <Border.Background>
                                 <ImageBrush ImageSource="/MRP4ME_Sample;component/Images/2.png"/>
                             </Border.Background>
@@ -43,10 +43,10 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Specifications</TextBlock>
                         </Border>
-                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
+                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#DBF5D2">
                             <Border.Background>
                                 <ImageBrush ImageSource="/MRP4ME_Sample;component/Images/3.png" />
                             </Border.Background>
@@ -58,10 +58,10 @@
                 <StackPanel Orientation="Horizontal" >
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Bill of Materials</TextBlock>
                         </Border>
-                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
+                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#DBF5D2">
                             <Border.Background>
                                 <ImageBrush ImageSource="/MRP4ME_Sample;component/Images/4.png"/>
                             </Border.Background>
@@ -73,10 +73,10 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Inventory Availability</TextBlock>
                         </Border>
-                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">
+                        <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#DBF5D2">
                             <Border.Background>
                                 <ImageBrush ImageSource="/MRP4ME_Sample;component/Images/5.png" />
                             </Border.Background>
@@ -85,7 +85,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical">
-                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#FFA2BEE6">
+                        <Border HorizontalAlignment="Center" Width="195" Height="25" VerticalAlignment="Bottom" Background="#C3EFB4">
                             <TextBlock FontWeight="Bold" FontSize="17" HorizontalAlignment="Center" Foreground="#FFF5F7FB">Reports</TextBlock>
                         </Border>
                         <Border BorderThickness="1" Margin="20,0,20,20" Height="180" Width="200" VerticalAlignment="Top" CornerRadius="6" BorderBrush="#FF1C66B0">

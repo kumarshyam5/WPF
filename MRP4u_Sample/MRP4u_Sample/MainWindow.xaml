@@ -13,16 +13,16 @@
          WindowStartupLocation="CenterScreen" 
                       BorderThickness="0" 
                       GlowBrush="Black"
-                      Background="AliceBlue"
+                      Background="#FFD9F1D5"
                       WindowTransitionsEnabled="False"
-                      WindowState="Maximized" Icon="Images/AppIcon.ico" MinWidth="1000" Closed="MetroWindow_Closed">
+                      WindowState="Maximized" Icon="MRPIcon.ico" MinWidth="1000" Closed="MetroWindow_Closed">
     <Window.Resources>
         <Thickness x:Key="Tab_Border_Thickness">2,2,2,2</Thickness>
         <Thickness x:Key="TabItem_Border_Thickness_Selected">2,2,2,0</Thickness>
         <Style TargetType="TabItem">
-            <Setter Property="BorderThickness" Value="3"/>
-            <Setter Property="BorderBrush" Value="White"/>
-            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Green"/>
+            <Setter Property="Background" Value="#78B73D"/>
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Header" Value="{Binding DataContext.Title}"/>
             <Setter Property="HeaderTemplate">
@@ -196,16 +196,15 @@
 
         <Grid Grid.Row="0">
             <Grid.Background>
-                <ImageBrush ImageSource="Images/Gradient2.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="Images/TopHeaderBg.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
             </Grid.RowDefinitions>
-            <Image Source="Images/LOGO250.png" HorizontalAlignment="Left" Margin="-24,-26,0,5" Width="333">
-                
-            </Image>
-            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
-                
+            <Image Source="Images/AppLogo.png" HorizontalAlignment="Left" Margin="-4,-21,0,21" Width="300" Height="80" />
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+
+
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <Label Content="Welcome User | " FontWeight="Bold"></Label>
@@ -270,8 +269,8 @@
                     </Expander>
                 </StackPanel>
             </Border>
-            <Border Margin="5,0,5,5" Grid.Column="1" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="10" >
-                <TabControl Margin="5" Background="LightBlue"   prism:RegionManager.RegionName="TabRegion">
+            <Border Margin="5,0,5,5" Grid.Column="1" BorderThickness="1" BorderBrush="White" CornerRadius="10" >
+                <TabControl Margin="5"  prism:RegionManager.RegionName="TabRegion">
                 </TabControl>
         </Border>
         </Grid>
