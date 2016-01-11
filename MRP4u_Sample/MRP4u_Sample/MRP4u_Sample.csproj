@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>MRPIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Images\MRPIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>MRP4u_Sample.App</StartupObject>
@@ -236,9 +236,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Images\TopHeaderBg.jpg" />
-    <Resource Include="Images\MRPIcon.ico" />
     <Resource Include="Images\AppLogo.png" />
     <Resource Include="MRPIcon.ico" />
+    <Resource Include="Images\MRPIcon.ico" />
     <Content Include="reports\MRPMatrix.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
